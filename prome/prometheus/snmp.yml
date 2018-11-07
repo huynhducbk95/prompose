@@ -1,0 +1,113 @@
+huawei:
+  walk:
+  - 1.3.6.1.4.1.2011.2.82.1.82.2
+  metrics:
+  - name: shelfListTargets
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.1
+    type: DisplayString
+    help: Used to find out what targets are available on a shelfLocation - 1.3.6.1.4.1.2011.2.82.1.82.2.1
+  - name: shelfDomain
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2
+    type: DisplayString
+    help: Set and query the shelf domain info. - 1.3.6.1.4.1.2011.2.82.1.82.2.2
+  - name: shelfLocation
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.4
+    type: DisplayString
+    help: A shelfLocation information. - 1.3.6.1.4.1.2011.2.82.1.82.2.4
+  - name: shelfHealth
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.5
+    type: gauge
+    help: Health information about a particular Location - 1.3.6.1.4.1.2011.2.82.1.82.2.5
+  - name: shelfHealthEvents
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.6
+    type: DisplayString
+    help: Events that contribute to the Health of the Location - 1.3.6.1.4.1.2011.2.82.1.82.2.6
+  - name: shelfChassisID
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.8
+    type: DisplayString
+    help: A ChassisID information. - 1.3.6.1.4.1.2011.2.82.1.82.2.8
+  - name: shelfFanTraycontrolmode
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.10
+    type: gauge
+    help: Get the mode of fantray. - 1.3.6.1.4.1.2011.2.82.1.82.2.10
+  - name: shelfRealTimePower
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.13
+    type: gauge
+    help: Get the realtime power of shelf. - 1.3.6.1.4.1.2011.2.82.1.82.2.13
+  - name: shelfPowerCappingEnable
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.14
+    type: gauge
+    help: Get the Power Capping Type of shelf. - 1.3.6.1.4.1.2011.2.82.1.82.2.14
+  - name: shelfPowerCapping
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.15
+    type: DisplayString
+    help: Get the Power Capping value of shelf. - 1.3.6.1.4.1.2011.2.82.1.82.2.15
+  - name: shelfSubnet
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.17
+    type: DisplayString
+    help: Get or Set Subnet. - 1.3.6.1.4.1.2011.2.82.1.82.2.17
+  - name: shelfChassisName
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.18
+    type: DisplayString
+    help: Get or Set shelfChassisName - 1.3.6.1.4.1.2011.2.82.1.82.2.18
+  - name: shelfPsuSleepConfig
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.21
+    type: DisplayString
+    help: Get or Set shelfPsuSleepConfig - 1.3.6.1.4.1.2011.2.82.1.82.2.21
+  - name: shelfPsuSleepStatus
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.22
+    type: DisplayString
+    help: Get shelfPsuSleepStatus - 1.3.6.1.4.1.2011.2.82.1.82.2.22
+  - name: shelfRmvAlarmState
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.23
+    type: DisplayString
+    help: Get and Set remove alarm state - 1.3.6.1.4.1.2011.2.82.1.82.2.23
+  - name: shelfNumber
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.1
+    type: gauge
+    help: ' - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.1'
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  - name: shelfPartNumber
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.14
+    type: DisplayString
+    help: Used to read the shelf Part Number from the Fru. - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.14
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  - name: shelfSerialNumber
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.15
+    type: DisplayString
+    help: Used to read the shelf Serial Number from the Fru. - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.15
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  - name: shelfType
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.16
+    type: DisplayString
+    help: Used to read the shelf Type from the Fru. - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.16
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  - name: shelffruAll
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.17
+    type: DisplayString
+    help: Used to read the shelf fru info all - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.17
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  - name: shelffruInfo
+    oid: 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.18
+    type: DisplayString
+    help: Used to read the shelf fru info all - 1.3.6.1.4.1.2011.2.82.1.82.2.2001.1.18
+    indexes:
+    - labelname: shelfNumber
+      type: gauge
+  version: 3
+  auth:
+    community: Viettel12#$
+    username: root
+    password: Huawei12#$
+    auth_protocol: SHA
+    priv_protocol: AES

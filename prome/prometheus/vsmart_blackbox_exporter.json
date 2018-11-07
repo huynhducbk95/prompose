@@ -1,0 +1,522 @@
+[
+  {
+    "targets": [
+      "192.168.0.105:6968"
+    ],
+    "labels": {
+      "service": "HTTP_SERVER",
+      "endpoint_url": "http://localhost:6968",
+      "endpoint_host": "192.168.0.105"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.130:8611"
+    ],
+    "labels": {
+      "service": "SMS_SERVICE",
+      "endpoint_url": "http://10.58.65.130:8611/vasp/Service.asmx",
+      "endpoint_host": "10.58.65.130"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.130:9005"
+    ],
+    "labels": {
+      "service": "SERVICE_URL",
+      "endpoint_url": "http://10.58.65.130:9005/vsaadminv3/VsaadminService?wsdl",
+      "endpoint_host": "10.58.65.130"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:8656"
+    ],
+    "labels": {
+      "service": "BCCS_GW",
+      "endpoint_url": "http://192.168.176.210:8656/BCCSGateway?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.60.34.8:8650"
+    ],
+    "labels": {
+      "service": "WEBSERVICE_HOSO",
+      "endpoint_url": "http://10.60.34.8:8650/wsap?wsdl",
+      "endpoint_host": "10.60.34.8"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.211:8231"
+    ],
+    "labels": {
+      "service": "IM",
+      "endpoint_url": "http://192.168.176.211:8231/wsap?wsdl",
+      "endpoint_host": "192.168.176.211"
+    }
+  },
+  {
+    "targets": [
+      "10.58.4.75:8240"
+    ],
+    "labels": {
+      "service": "PAYMENT_WS",
+      "endpoint_url": "http://10.58.4.75:8240/PaymentServices/PaymentServices?wsdl",
+      "endpoint_host": "10.58.4.75"
+    }
+  },
+  {
+    "targets": [
+      "10.58.71.149:8998"
+    ],
+    "labels": {
+      "service": "QLCR_SERVICE",
+      "endpoint_url": "http://10.58.71.149:8998/QLCR_WS/QLCR_WS?wsdl",
+      "endpoint_host": "10.58.71.149"
+    }
+  },
+  {
+    "targets": [
+      "10.60.5.245:9008"
+    ],
+    "labels": {
+      "service": "NIMS_HT_INFRAWS_URL, NIMS_NIMSWS_SERVICE_URL, NIMS_WS_SERVICE_URL_INFRA, NIMS_WS_SERVICE",
+      "endpoint_url": "http://10.60.5.245:9008/NIMS_Infra_Service/InfraWS?wsdl, http://10.60.5.245:9008/NIMS_Infra_Service/InfraWS?wsdl, http://10.60.5.245:9008/NIMS_Infra_Service/NIMSWS?wsdl, http://10.60.5.245:9008/NIMS_Infra_Service/NIMSWS?wsdl",
+      "endpoint_host": "10.60.5.245"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:8897"
+    ],
+    "labels": {
+      "service": "QOS_WS_SERVICE",
+      "endpoint_url": "http://192.168.176.210:8897/QoSWebservice/QoSService?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.142:8090"
+    ],
+    "labels": {
+      "service": "LINK_SERVER_DOWNLOAD",
+      "endpoint_url": "http://10.60.7.142:8090",
+      "endpoint_host": "10.60.7.142"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:8228"
+    ],
+    "labels": {
+      "service": "cr_sync_services_url, CR_MOBLIE",
+      "endpoint_url": "http://192.168.176.210:8228/WSCRMobileVSmart/SyncToVsmartWS?wsdl, http://192.168.176.210:8228/WSCRMobileVSmart/WSCRMobile?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.58.137.12:8282"
+    ],
+    "labels": {
+      "service": "QLCTKT_WS_SERVICE",
+      "endpoint_url": "http://10.58.137.12:8282/CBS-WS/QLCTKT?wsdl",
+      "endpoint_host": "10.58.137.12"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.130:9099"
+    ],
+    "labels": {
+      "service": "TKTU_WS",
+      "endpoint_url": "http://10.58.65.130:9099/TKTU_Webservice/TKTUWS?wsdl",
+      "endpoint_host": "10.58.65.130"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.106:9599"
+    ],
+    "labels": {
+      "service": "codien_ws_url, CODIEN_WS_SERVICE",
+      "endpoint_url": "http://192.168.176.106:9599/CD_MPD_WS/ItemInfoWS?wsdl, http://192.168.176.106:9599/CD_MPD_WS/VSmartWS?wsdl",
+      "endpoint_host": "192.168.176.106"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.213:8567"
+    ],
+    "labels": {
+      "service": "BCCS_CC_COMPLAIN_WS_SERVICE_URL, BCCS_CC_WS_SERVICE",
+      "endpoint_url": "http://192.168.176.213:8567/CCWebservice/complainWS?wsdl, http://192.168.176.213:8567/CCWebservice/CcServiceForNTMS?wsdl",
+      "endpoint_host": "192.168.176.213"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.211:8889"
+    ],
+    "labels": {
+      "service": "NIMS_SERVICE_URL, NIMS_SERVICE_INFRA",
+      "endpoint_url": "http://192.168.176.211:8889/NIMS_Infra_Service/InfraWS?wsdl, http://192.168.176.211:8889/NIMS_Infra_Service/InfraWS?wsdl",
+      "endpoint_host": "192.168.176.211"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:9992"
+    ],
+    "labels": {
+      "service": "GNOC_WFM_WO_WS",
+      "endpoint_url": "http://192.168.176.210:9992/WFMServer/VSmartWS?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.30.9.205:8028"
+    ],
+    "labels": {
+      "service": "HOTLINE_WS_SERVICE",
+      "endpoint_url": "http://10.30.9.205:8028/WebServiceHotLine/WebServiceHotline?wsdl",
+      "endpoint_host": "10.30.9.205"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.180:9999"
+    ],
+    "labels": {
+      "service": "GATE_PRO_WS_FTTX, fttx_service_url_bccs_2, GATE_PRO_WS_GPON, GATE_PRO_WS_FTTX, fttx_service_url_kv_bccs_2, fttx_service_url_kv1_bccs_2",
+      "endpoint_url": "http://10.58.65.180:9999/AONService/RedoAONService?wsdl, http://10.58.65.180:9999/AONService/RedoAONService?wsdl ,http://10.58.65.180:9999/AONService/RedoAONService?wsdl, http://10.58.65.180:9999/FTTxService/FTTxService?wsdl, http://10.58.65.180:9999/FTTxService/GPONService?wsdl, http://10.58.65.180:9999/FTTxService/FTTxService?wsdl",
+      "endpoint_host": "10.58.65.180"
+    }
+  },
+  {
+    "targets": [
+      "10.40.17.1:8888"
+    ],
+    "labels": {
+      "service": "GATE_PRO_WS_FTTX_kv2, GATE_PRO_WS_FTTX_kv2, fttx_service_url_kv2_bccs_2",
+      "endpoint_url": "http://10.40.17.1:8888/AONService/RedoAONService?wsdl, http://10.40.17.1:8888/FTTxService/FTTxService?wsdl, http://10.40.17.1:8888/FTTxService/FTTxService?wsdl",
+      "endpoint_host": "10.40.17.1"
+    }
+  },
+  {
+    "targets": [
+      "10.74.225.49:8888"
+    ],
+    "labels": {
+      "service": "GATE_PRO_WS_FTTX_kv3, GATE_PRO_WS_FTTX_kv3, fttx_service_url_kv3_bccs_2",
+      "endpoint_url": "http://10.74.225.49:8888/AONService/RedoAONService?wsdl, http://10.74.225.49:8888/FTTxService/FTTxService?wsdl, http://10.74.225.49:8888/FTTxService/FTTxService?wsdl",
+      "endpoint_host": "10.74.225.49"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.180:9001"
+    ],
+    "labels": {
+      "service": "nocpro_ws",
+      "endpoint_url": "http://10.58.65.180:9001/Nocpro_Webservice/NocproWebservice?wsdl",
+      "endpoint_host": "10.58.65.180"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:9994"
+    ],
+    "labels": {
+      "service": "GNOC_REASON_WS_URL, GNOC_SERVICE",
+      "endpoint_url": "http://192.168.176.210:9994/ProblemGNOC/CatReasonService?wsdl, http://192.168.176.210:9994/ProblemGNOC/TroublesService?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:8661"
+    ],
+    "labels": {
+      "service": "PASS_PORT_WS",
+      "endpoint_url": "http://10.60.7.126:8661/passportv3/passportWS?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.129.245:8010"
+    ],
+    "labels": {
+      "service": "QLTS_SERVICE_URL, KTTS_SERVICE",
+      "endpoint_url": "http://10.60.129.245:8010/KTTS_SYNC_WS/QLCTKTSyncWS?wsdl, http://10.60.129.245:8010/KTTS_SYNC_WS/VSmartService?wsdl",
+      "endpoint_host": "10.60.129.245"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:9996"
+    ],
+    "labels": {
+      "service": "GNOC_COMMON_VSMART_WS",
+      "endpoint_url": "http://192.168.176.210:9996/CommonGNOC/VSmartWS?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:9905"
+    ],
+    "labels": {
+      "service": "STM_WS",
+      "endpoint_url": "http://10.60.7.126:9905/STMService/STMService?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:9906"
+    ],
+    "labels": {
+      "service": "STM_WS_URL_KV2",
+      "endpoint_url": "http://10.60.7.126:9906/STMService/STMService?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:9907"
+    ],
+    "labels": {
+      "service": "STM_WS_URL_KV3",
+      "endpoint_url": "http://10.60.7.126:9907/STMService/STMService?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:9903"
+    ],
+    "labels": {
+      "service": "SPM_ANALYS_WS",
+      "endpoint_url": "http://10.60.7.126:9903/SPMService/AnalysProcessService?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.240.147.248:8001"
+    ],
+    "labels": {
+      "service": "ws_bccs_shop",
+      "endpoint_url": "http://10.240.147.248:8001/SALE_SERVICE/bpm/sale/UpdateTaskService?wsdl",
+      "endpoint_host": "10.240.147.248"
+    }
+  },
+  {
+    "targets": [
+      "10.240.147.247:8001"
+    ],
+    "labels": {
+      "service": "ws_bccs_im",
+      "endpoint_url": "http://10.240.147.247:8001/PRODUCT_SERVICE/bpm/product/AccServGroupService",
+      "endpoint_host": "10.240.147.247"
+    }
+  },
+  {
+    "targets": [
+      "10.240.147.246:8001"
+    ],
+    "labels": {
+      "service": "ws_bccs_cc",
+      "endpoint_url": "http://10.240.147.246:8001/CCService/bpm/SpmService?wsdl",
+      "endpoint_host": "10.240.147.246"
+    }
+  },
+  {
+    "targets": [
+      "10.58.71.189:9191"
+    ],
+    "labels": {
+      "service": "HOTLINE_WS_SERVICE_2",
+      "endpoint_url": "http://10.58.71.189:9191/WebServiceHotLine/WebServiceHotline?wsdl",
+      "endpoint_host": "10.58.71.189"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:8877"
+    ],
+    "labels": {
+      "service": "nims_if_bccs2",
+      "endpoint_url": "http://10.60.7.126:8877/NIMS_Infra_Service_BCCS2/NIMSWS?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.240.147.245:8005"
+    ],
+    "labels": {
+      "service": "ws_bccs2_im",
+      "endpoint_url": "http://10.240.147.245:8005/InventoryService/bpm/inventory/InventoryService?wsdl",
+      "endpoint_host": "10.240.147.245"
+    }
+  },
+  {
+    "targets": [
+      "10.60.97.98:9599"
+    ],
+    "labels": {
+      "service": "codien2_service",
+      "endpoint_url": "http://10.60.97.98:9599/EEE2WS/VsmartWS?wsdl",
+      "endpoint_host": "10.60.97.98"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:9099"
+    ],
+    "labels": {
+      "service": "TKTU_VSMART_WS",
+      "endpoint_url": "http://10.60.7.126:9099/TKTU_Webservice/TKTU_VSMART?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.7.126:8032"
+    ],
+    "labels": {
+      "service": "BIKT_WS",
+      "endpoint_url": "http://10.60.7.126:8032/BIKTService/ServiceQLCTKT?wsdl",
+      "endpoint_host": "10.60.7.126"
+    }
+  },
+  {
+    "targets": [
+      "10.60.5.245:8687"
+    ],
+    "labels": {
+      "service": "CC_ALERT_SERVICE",
+      "endpoint_url": "http://10.60.5.245:8687/CCService/bpm/AlertErrorService?wsdl",
+      "endpoint_host": "10.60.5.245"
+    }
+  },
+  {
+    "targets": [
+      "10.60.129.73:8888"
+    ],
+    "labels": {
+      "service": "VMSA_WS_GNOC",
+      "endpoint_url": "http://10.60.129.73:8888/MSChangeProcess/WSForGNOCImpl?wsdl",
+      "endpoint_host": "10.60.129.73"
+    }
+  },
+  {
+    "targets": [
+      "192.168.176.210:9995"
+    ],
+    "labels": {
+      "service": "GNOC_MR_WS",
+      "endpoint_url": "http://192.168.176.210:9995/MRGNOCServer/MrService?wsdl",
+      "endpoint_host": "192.168.176.210"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.130:8086"
+    ],
+    "labels": {
+      "service": "NPMS_SERVICE_URL, NPMS_WS_URL, cell2GServiceUrl, cell3GServiceUrl, NPMS_FEEDER_SERVICE",
+      "endpoint_url": "http://10.58.65.130:8086/NPMSFeederService_attt/PNMSResource?wsdl, http://10.58.65.130:8086/NPMSFeederService_attt/PNMSResource?wsdl, http://10.58.65.130:8086/NPMSFeederService/Service2G?wsdl, http://10.58.65.130:8086/NPMSFeederService/Service3G?wsdl, http://10.58.65.130:8086/NPMSFeederService_attt/NPMSFeederService?wsdl",
+      "endpoint_host": "10.58.65.130"
+    }
+  },
+  {
+    "targets": [
+      "192.168.131.50:8084"
+    ],
+    "labels": {
+      "service": "SPM_SERVICE",
+      "endpoint_url": "http://192.168.131.50:8084/SPMService/SPM?wsdl",
+      "endpoint_host": "192.168.131.50"
+    }
+  },
+  {
+    "targets": [
+      "10.58.65.130:8079"
+    ],
+    "labels": {
+      "service": "url_ws_qlctkt_vtg",
+      "endpoint_url": "http://10.58.65.130:8079/QLCTKT_Service/VTGWS?wsdl",
+      "endpoint_host": "10.58.65.130"
+    }
+  },
+  {
+    "targets": [
+      "10.60.130.8:9880"
+    ],
+    "labels": {
+      "service": "url_ws_uctt",
+      "endpoint_url": "http://10.60.130.8:9880/NIMS/services/UCBL_WS?wsdl",
+      "endpoint_host": "10.60.130.8"
+    }
+  },
+  {
+    "targets": [
+      "10.60.97.98:9696"
+    ],
+    "labels": {
+      "service": "CPWS_SERVICE",
+      "endpoint_url": "http://10.60.97.98:9696/CPWS/CPWS?wsdl",
+      "endpoint_host": "10.60.97.98"
+    }
+  },
+  {
+    "targets": [
+      "10.60.131.21:8070"
+    ],
+    "labels": {
+      "service": "SR_WS",
+      "endpoint_url": "http://10.60.131.21:8070/SRServer/SRService?wsdl",
+      "endpoint_host": "10.60.131.21"
+    }
+  },
+  {
+    "targets": [
+      "10.60.106.75:9080"
+    ],
+    "labels": {
+      "service": "SMART_KEY",
+      "endpoint_url": "http://10.60.106.75:9080/api/Totp/Get",
+      "endpoint_host": "10.60.106.75"
+    }
+  },
+  {
+    "targets": [
+      "10.30.8.23:1521"
+    ],
+    "labels": {
+      "service": "DB_VSMART_INS_1",
+      "endpoint_url": "tcp://10.30.8.23:1521",
+      "endpoint_host": "10.30.8.23"
+    }
+  },
+  {
+    "targets": [
+      "10.30.8.24:1521"
+    ],
+    "labels": {
+      "service": "DB_VSMART_INS_2",
+      "endpoint_url": "tcp://10.30.8.24:1521",
+      "endpoint_host": "10.30.8.24"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+route:
+  receiver: email_duclh3
+
+receivers:
+  - name: 'email_duclh3'
+    email_configs:
+      - to: 'duclh3@viettel.com.vn'
+        from: 'duclh3@viettel.com.vn'
+        smarthost: 10.240.201.49:9011
+        auth_username: 'duclh3@viettel.com.vn'
+        auth_identity: 'duclh3@viettel.com.vn'
+        auth_password: 'BKCloud@!2018'
+        require_tls: false
+        text: "{{ .CommonAnnotations.description }}"
+        headers:
+          subject: "[alerting][openstack-hlct5] {{ .CommonAnnotations.summary }}"

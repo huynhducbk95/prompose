@@ -1,7 +1,0 @@
----
-
-- name: Stopping all running containers
-  docker_service:
-    project_src: "{{ prompose_path }}"
-    state: "present"
-    stopped: "yes"

@@ -1,0 +1,224 @@
+# my global config
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  # scrape_timeout is set to the global default (10s).
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+      monitor: 'openstack-lab'
+
+rule_files:
+  - 'alert.rules'
+  
+alerting:
+  alertmanagers:
+  - scheme: http
+    static_configs:
+      - targets:
+        - '192.168.0.105:9093'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['192.168.0.105:9090']
+
+  - job_name: 'node-exporter'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['192.168.0.105:9100']
+
+  - job_name: 'openstack-instance-node'
+    openstack_sd_configs:
+      - role: instance
+        identity_endpoint: http://10.240.201.100:5000/v3
+        username: admin
+        password: 9x2oPKaJiMSKUmjZCa5qXZEocbqBSjF92xLCNXP3
+        domain_name: Default
+        port: 9100
+        refresh_interval: 20s
+        region: RegionOne
+        project_name: vsmart_microservice
+
+    relabel_configs:
+        # keep only active instances
+      - source_labels: [__meta_openstack_instance_status]
+        action: keep
+        regex: ACTIVE
+
+        # drop un-monitored instances
+      - source_labels: [__meta_openstack_tag_monitoring]
+        action: keep
+        regex: 1
+
+        # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_service]
+        target_label: service
+        replacement: $1
+
+        # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_microservice]
+        target_label: microservice
+        replacement: $1
+
+  - job_name: 'blackbox_vsmart_tradition_ip_10.0.0.1'
+    metrics_path: /probe
+    params:
+      module: [tcp_connect]
+    file_sd_configs:
+    - files:
+      - 'vsmart_blackbox_exporter.json'
+
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.0.105:9115
+
+  - job_name: 'blackbox_vsmart_microservice_ip_10.0.0.1'
+    metrics_path: /probe
+    params:
+      module: [tcp_connect]
+    file_sd_configs:
+    - files:
+      - 'vsmart_blackbox_exporter.json'
+
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.0.105:9115
+#  - job_name: 'snmp'
+#    static_configs:
+#      - targets:
+#        - 10.240.200.28:161  # SNMP device.
+#    metrics_path: /snmp
+#    params:
+#      module: [huawei]
+#    relabel_configs:
+#      - source_labels: [__address__]
+#        target_label: __param_target
+#      - source_labels: [__param_target]
+#        target_label: instance
+#      - target_label: __address__
+#        replacement: 10.240.201.49:9116
+
+
+  - job_name: openstack-instance-cadvisor
+    openstack_sd_configs:
+      - role: instance
+        identity_endpoint: http://10.240.201.100:5000/v3
+        username: admin
+        password: 9x2oPKaJiMSKUmjZCa5qXZEocbqBSjF92xLCNXP3
+        domain_name: Default
+        port: 8002
+        refresh_interval: 20s
+        region: RegionOne
+        project_name: vsmart_microservice
+    relabel_configs:
+        # keep only active instances
+      - source_labels: [__meta_openstack_instance_status]
+        action: keep
+        regex: ACTIVE
+
+        # drop un-monitored instances
+      - source_labels: [__meta_openstack_tag_monitoring]
+        action: keep
+        regex: 1
+
+        # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_service]
+        target_label: service
+        replacement: $1
+
+        # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_microservice]
+        target_label: microservice
+        replacement: $1
+
+  - job_name: openstack-instance-jmx-infra-maintaining-service
+    openstack_sd_configs:
+      - role: instance
+        identity_endpoint: http://10.240.201.100:5000/v3
+        username: admin
+        password: 9x2oPKaJiMSKUmjZCa5qXZEocbqBSjF92xLCNXP3
+        domain_name: Default
+        port: 8075
+        refresh_interval: 20s
+        region: RegionOne
+        project_name: vsmart_microservice
+
+    relabel_configs:
+      # keep only active instances
+      - source_labels: [__meta_openstack_instance_status]
+        action: keep
+        regex: ACTIVE
+
+      # drop un-monitored instances
+      - source_labels: [__meta_openstack_tag_monitoring]
+        action: keep
+        regex: 1
+
+      # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_service]
+        target_label: service
+        replacement: $1
+
+      # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_microservice]
+        action: keep
+        regex: infra-maintaining-service
+        target_label: microservice
+        replacement: $1
+
+      # change metrics_path, Openstack sd doesn't support
+      # a custom metrics_path
+      - target_label: __metrics_path__
+        replacement: /actuator/prometheus
+
+  - job_name: openstack-instance-jmx-cdbr-service
+    openstack_sd_configs:
+      - role: instance
+        identity_endpoint: http://10.240.201.100:5000/v3
+        username: admin
+        password: 9x2oPKaJiMSKUmjZCa5qXZEocbqBSjF92xLCNXP3
+        domain_name: Default
+        port: 8071
+        refresh_interval: 20s
+        region: RegionOne
+        project_name: vsmart_microservice
+
+    relabel_configs:
+      # keep only active instances
+      - source_labels: [__meta_openstack_instance_status]
+        action: keep
+        regex: ACTIVE
+
+      # drop un-monitored instances
+      - source_labels: [__meta_openstack_tag_monitoring]
+        action: keep
+        regex: 1
+
+      # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_service]
+        target_label: service
+        replacement: $1
+
+      # amend label format of the final metrics
+      - source_labels: [__meta_openstack_tag_microservice]
+        action: keep
+        regex: cdbr-service
+        target_label: microservice
+        replacement: $1
+
+      # change metrics_path, Openstack sd doesn't support
+      # a custom metrics_path
+      - target_label: __metrics_path__
+        replacement: /actuator/prometheus
+
